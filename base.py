@@ -126,7 +126,7 @@ def full_url_for(*args,**kw):
     if app.config["DEBUG"]:
         base = "http://localhost:5000"
     else:
-        base = "https://tilde.za3k.com" + info["subdir"]
+        base = "https://tilde.za3k.com"
     return base + short
 @app.context_processor
 def inject_dict_for_all_templates():
