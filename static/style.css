@@ -1,0 +1,96 @@
+/* -- This specific Hack-A-Day project -- */
+
+/* Taken from https://levelup.gitconnected.com/how-to-make-a-go-board-with-css-ac4cba7d0b72 */
+.go-table {
+  width: 720px;
+  height: 720px;
+  padding: calc(720px / 40);
+  background-color: #f1b06c;
+  background-image: url(image/wood-pattern.png);
+  box-sizing: content-box; /* Override bootstap */
+}
+.board {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(36, calc(720px / 36));
+  grid-template-rows: repeat(36, calc(720px / 36));
+  border-right: 1px solid grey;
+  border-bottom: 1px solid grey;
+  background-size: calc(720px / 18) calc(720px / 18);
+  background-image: linear-gradient(to right, grey 1px, transparent 1px),
+    linear-gradient(to bottom, grey 1px, transparent 1px);
+}
+.board.locked {
+  background-color: grey;
+}
+.error {
+  background-color: pink;
+  width: 756px;
+  font-size: x-large;
+  text-align center;
+  margin: 10px 0 10px 0;
+}
+.turn {
+  font-size: x-large;
+  margin: 10px 0 10px 0;
+  text-align: center;
+}
+.victor {
+  font-size: x-large;
+  margin: 10px 0 10px 0;
+  text-align: center;
+}
+.victor:not(:empty)::before {
+  content: "Victor:";
+  margin-right: 10px;
+}
+.turn:not(:empty)::before {
+  content: "Turn:";
+  margin-right: 10px;
+}
+.star {
+  width: calc(100% / 4);
+  height: calc(100% / 4);
+  border-radius: 50%;
+  background-color: grey;
+  align-self: center;
+  justify-self: center;
+  z-index: 1;
+}
+.stone {
+  border-radius: 50%;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25),
+    -2px -2px 4px 0 rgba(255, 255, 255, 0.25);
+  z-index: 2;
+}
+.black {
+  background: linear-gradient(145deg, #f6cfa6, #000000);
+}
+.white {
+  background: linear-gradient(145deg, #f6cfa6, #ffffff);
+}
+.preview {
+  opacity: 50%;
+}
+
+/* -- All Hack-A-Day projects -- */
+.about {
+    white-space: pre-wrap;
+}
+.footer {
+    background-color: rgba(0,0,0,0.2);
+    margin-top: 20px;
+}
+.footer ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.navbar-brand-link a {
+    color: #777;
+}
+.navbar-brand-link a:hover {
+    color: #000;
+    text-decoration: none;
+}

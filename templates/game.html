@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}play{% endblock %}
+{% block header %}
+    To win, get five in a row. Share this link with your opponent: <a href="{{ opponent_url }}">{{ opponent_url}}</a>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+<div class='go-table'>
+    <div class='board'>
+        <div class='star' style='grid-column-start: 6; grid-column-end: 8; grid-row-start: 6; grid-row-end: 8;'></div>
+        <div class='star' style='grid-column-start: 6; grid-column-end: 8; grid-row-start: 18; grid-row-end: 20;'></div>
+        <div class='star' style='grid-column-start: 6; grid-column-end: 8; grid-row-start: 30; grid-row-end: 32;'></div>
+        <div class='star' style='grid-column-start: 18; grid-column-end: 20; grid-row-start: 6; grid-row-end: 8;'></div>
+        <div class='star' style='grid-column-start: 18; grid-column-end: 20; grid-row-start: 18; grid-row-end: 20;'></div>
+        <div class='star' style='grid-column-start: 18; grid-column-end: 20; grid-row-start: 30; grid-row-end: 32;'></div>
+        <div class='star' style='grid-column-start: 30; grid-column-end: 32; grid-row-start: 6; grid-row-end: 8;'></div>
+        <div class='star' style='grid-column-start: 30; grid-column-end: 32; grid-row-start: 18; grid-row-end: 20;'></div>
+        <div class='star' style='grid-column-start: 30; grid-column-end: 32; grid-row-start: 30; grid-row-end: 32;'></div>
+        <div class="stone {{color}} preview"></div>
+    </div>
+</div>
+<div class="victor"></div>
+<div class="turn"></div>
+<div class="error"></div>
+{% endblock %}

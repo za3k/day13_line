@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>{% block title %}{{ project_name }}{% endblock %}</h1>
+    {{ project_name }} is {{ description }}.
+{% endblock %}
+
+{% block content %}
+Click to <a href="{{ url_for("new_game") }}">start a new game</a>
+{% endblock %}
