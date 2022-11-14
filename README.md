@@ -11,3 +11,6 @@ Known bugs: display of pieces on the edges and corners is wrong.
 Demo available [here](https://tilde.za3k.com/hackaday/line).
 
 Source available on [github](https://github.com/za3k/day13_line).
+
+## Credits
+Go board display due to [Li-Hsuan Lung](https://levelup.gitconnected.com/how-to-make-a-go-board-with-css-ac4cba7d0b72).
